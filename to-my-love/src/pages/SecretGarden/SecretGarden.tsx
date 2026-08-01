@@ -63,10 +63,10 @@ export function SecretGarden() {
             <p className="script-heading mb-4 text-2xl md:text-3xl">A letter, just for you</p>
             <div className="glass-panel max-w-lg px-8 py-8 text-left shadow-glowMd">
               <p className="font-display text-base italic leading-relaxed text-white/85 md:text-lg">
-                My dearest Figgy, if you&rsquo;re reading this, it means you stayed &mdash;
+                My dearest Figgy(pindhi), if you&rsquo;re reading this, it means you stayed
                 through every page, every memory, all the way here. That&rsquo;s exactly
                 how I feel about you: worth staying for, every single time. Thank you
-                for being my favorite story.
+                for being my favorite figgy.
               </p>
               <p className="mt-6 text-right font-script text-2xl text-sakura-200">Always yours</p>
             </div>
