@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  html,
+  body {
+    @apply min-h-full w-full bg-night-950 text-moon-100 antialiased;
+    /* NOTE: do not set overflow-x here paired with a fixed height — per spec that
+       forces overflow-y to compute as 'auto', turning html/body into a clipped
+       scroll container capped at 100vh and killing page scroll entirely. */
+  }
+
+  #root {
+    @apply min-h-full w-full;
+    overflow-x: clip;
+  }
+
+  body {
+    @apply font-body;
+    cursor: none;
+  }
+
+  /* Required by Lenis so it controls scroll smoothly instead of fighting native scroll */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    body {
+      cursor: auto;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-sakura-400/40 text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f766ab, #8a6fd8);
+    border-radius: 999px;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 18px rgba(255, 182, 217, 0.65), 0 0 44px rgba(199, 148, 255, 0.35);
+  }
+
+  .script-heading {
+    @apply font-script text-sakura-200;
+  }
+}
