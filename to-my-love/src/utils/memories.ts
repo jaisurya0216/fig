@@ -16,6 +16,7 @@ export const memories: Memory[] = [
     date: 'The day we met',
     title: 'Where it began',
     message: 'I still remember exactly how the light looked that day.',
+    image: 'public/images/1.jpg'
   },
   {
     id: 'mem-2',
